@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Capstone — Master Plan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-inner">
+        <a class="brand" href="index.html"
+          ><span class="dot"></span> <span>Capstone</span></a
+        >
+        <nav class="nav" aria-label="Primary">
+          <a class="active" href="master-plan.html">Master Plan / Roadmap</a>
+          <a href="updates.html">Weekly Updates</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Roadmap -->
+      <div class="section-group">
+        <h2>Roadmap</h2>
+        <section class="roadmap-diagram" aria-label="Project roadmap diagram">
+          <div class="roadmap-rail">
+            <div class="roadmap-node">
+              <div class="phase">Phase 1</div>
+              <div class="desc">Discover & Define</div>
+              <div class="blurb">
+                Research problems, build a business case, define requirements.
+              </div>
+              <div class="target">Target: Sept 22, 2025</div>
+            </div>
+
+            <div class="roadmap-node">
+              <div class="phase">Phase 2</div>
+              <div class="desc">Concept Development</div>
+              <div class="blurb">
+                Generate solution concepts, compare trade-offs, select concept.
+              </div>
+              <div class="target">Target: Oct 20, 2025</div>
+            </div>
+
+            <div class="roadmap-node">
+              <div class="phase">Phase 3</div>
+              <div class="desc">Detailed Design</div>
+              <div class="blurb">
+                CAD, electrical schematics, software architecture, prep for
+                build.
+              </div>
+              <div class="target">Target: Nov 23, 2025</div>
+            </div>
+
+            <div class="roadmap-node">
+              <div class="phase">Phase 4</div>
+              <div class="desc">Prototype & Integration</div>
+              <div class="blurb">
+                Build, integrate, test, and debug subsystems.
+              </div>
+              <div class="target">Target: Feb 27, 2026</div>
+            </div>
+
+            <div class="roadmap-node">
+              <div class="phase">Phase 5</div>
+              <div class="desc">Validation & Delivery</div>
+              <div class="blurb">
+                Verify against requirements, demo and report.
+              </div>
+              <div class="target">Target: Mar 20, 2026</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Business Case -->
+      <div class="section-group">
+        <h2>Business Case</h2>
+
+        <section class="section">
+          <h3>Background</h3>
+          <p>
+            Provide a background: what are we even talking about? why should
+            people care? what are they caring about? whats currently being done.
+            this should give people enough context to understand the next parts.
+          </p>
+        </section>
+
+        <section class="section">
+          <h3>Problem Statement</h3>
+          <p>
+            Define the problem precisely. should this be exactly the same as the
+            front page? maybe...
+          </p>
+        </section>
+
+        <section class="section">
+          <h3>Needs Analysis</h3>
+          <p>Who needs what</p>
+        </section>
+
+        <section class="section">
+          <h3>Value Proposition</h3>
+          <p>
+            what is the value of us doing this? time? money? safety? talk about
+            all of these things...more the better and make sure theyre true
+          </p>
+        </section>
+      </div>
+
+      <!-- Team/Sponsors/Advisors grouped -->
+      <div class="section-group">
+        <h2>Our Team & Support</h2>
+
+        <section class="section">
+          <h3>Our Team</h3>
+          <div class="team-grid">
+            <div class="team-member">
+              <img src="assets/images/person1.jpg" alt="Headshot of Person 1" />
+              <h4>Chelsea Dmytryk</h4>
+              <p>Role / Title</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/images/person2.jpg" alt="Headshot of Person 2" />
+              <h4>Nicholas Drazso</h4>
+              <p>Role / Title</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/images/person3.jpg" alt="Headshot of Person 3" />
+              <h4>Nathan Rowe</h4>
+              <p>Role / Title</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/images/person4.jpg" alt="Headshot of Person 4" />
+              <h4>Lili Strong</h4>
+              <p>Role / Title</p>
+            </div>
+            <div class="team-member">
+              <img src="assets/images/person5.jpg" alt="Headshot of Person 5" />
+              <h4>Natalie Tsang</h4>
+              <p>Role / Title</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Sponsorship</h3>
+          <p>
+            List sponsors, what they provide (funding, hardware, mentorship),
+            and how others can join.
+          </p>
+        </section>
+
+        <section class="section">
+          <h3>Advisors / Partners</h3>
+          <p>
+            List supporting faculty, industry partners, or community members who
+            are helping guide and/or support the project.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>© <span id="year"></span> Capstone Team</footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
