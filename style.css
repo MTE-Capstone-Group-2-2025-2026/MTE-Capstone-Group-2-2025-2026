@@ -1,15 +1,22 @@
 :root {
-  --bg: #0e0f12;
-  --card: #14161a;
-  --text: #e8eaed;
-  --muted: #9aa0a6;
-  --accent: #6ea8ff;
-  --border: #2a2e35;
+  /* Light mode palette */
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --text: #1e2430;
+  --muted: #5b6578;
+  --accent: #2b6be4;
+  --border: #e4e8ee;
+
+  /* Extras */
+  --radius: 16px;
+  --shadow: 0 6px 24px rgba(30, 36, 48, 0.08);
+  --section-bg: color-mix(in srgb, var(--accent) 4%, #ffffff);
 }
 
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   margin: 0;
@@ -28,7 +35,7 @@ a {
   text-decoration: none;
 }
 a:focus {
-  outline: 2px dashed var(--accent);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 6px;
 }
@@ -39,13 +46,14 @@ a:focus {
   padding: 24px;
 }
 
+/* Header / Nav */
 header {
-  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  backdrop-filter: saturate(1.2) blur(6px);
-  background: color-mix(in srgb, var(--bg) 82%, transparent);
   z-index: 10;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: saturate(1.2) blur(6px);
+  background: color-mix(in srgb, #ffffff 85%, transparent);
 }
 .header-inner {
   display: flex;
@@ -85,23 +93,27 @@ header {
   color: var(--text);
   border-color: var(--border);
   background: var(--card);
+  box-shadow: var(--shadow);
 }
 .nav a.active {
-  color: var(--text);
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 10%, var(--card) 90%);
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  background: color-mix(in srgb, var(--accent) 8%, var(--card));
 }
 
+/* Main */
 main {
   padding: 24px;
 }
 
+/* Hero */
 .hero {
   padding: 42px;
   border: 1px solid var(--border);
   background: var(--card);
-  border-radius: 16px;
+  border-radius: var(--radius);
   line-height: 1.6;
+  box-shadow: var(--shadow);
 }
 .hero h1 {
   margin: 0 0 12px;
@@ -117,16 +129,19 @@ main {
   padding: 10px 14px;
   border-radius: 10px;
   background: var(--accent);
-  color: #0b1020;
+  color: #fff;
   font-weight: 600;
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
+/* Sections / Cards */
 .section {
   margin: 24px 0;
   padding: 24px;
   border: 1px solid var(--border);
   background: var(--card);
-  border-radius: 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 .section h2 {
   margin: 0 0 12px;
@@ -144,11 +159,13 @@ main {
   border: 1px solid var(--border);
   background: var(--card);
   border-radius: 14px;
-  transition: transform 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.15s ease, border-color 0.15s ease,
+    box-shadow 0.15s ease;
 }
 .card:hover {
   transform: translateY(-2px);
-  border-color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  box-shadow: var(--shadow);
 }
 .card .kicker {
   color: var(--muted);
@@ -185,13 +202,14 @@ main {
   max-width: 100%;
   border-radius: 12px;
   border: 1px solid var(--border);
+  background: #f0f2f7;
 }
 
 /* Roadmap diagram */
 .roadmap-diagram {
-  border: 1px dashed var(--accent);
+  border: 2px solid var(--border); /* solid border (not dotted) */
   background: color-mix(in srgb, var(--accent) 6%, var(--card) 94%);
-  border-radius: 16px;
+  border-radius: var(--radius);
   padding: 20px;
   margin: 24px 0;
 }
@@ -202,26 +220,38 @@ main {
   padding: 6px 2px;
 }
 .roadmap-node {
-  flex: 0 0 180px;
+  flex: 0 0 200px;
   padding: 12px;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--card);
   text-align: center;
+  box-shadow: var(--shadow);
 }
 
+/* Phase number (underlined) and Title — bigger & dark for light mode */
 .roadmap-node .phase,
 .roadmap-node .desc {
   font-weight: 700;
-  color: #fff;
-  font-size: 1.2rem;
+  color: var(--text);
+  font-size: 1.3rem;
   margin-top: 6px;
   margin-bottom: 0.25rem;
   text-align: center;
 }
-
 .roadmap-node .phase {
   text-decoration: underline;
+}
+
+/* Blurb + target (muted and small; target italic only) */
+.roadmap-node .blurb,
+.roadmap-node .target {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+.roadmap-node .target {
+  font-style: italic;
 }
 
 /* Anchor target highlight */
@@ -234,6 +264,7 @@ main {
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
+/* Footer */
 footer {
   border-top: 1px solid var(--border);
   color: var(--muted);
@@ -255,32 +286,28 @@ details.update-details {
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--card);
+  box-shadow: var(--shadow);
 }
-
 details.update-details > summary {
   cursor: pointer;
-  list-style: none; /* removes default triangle in some browsers */
+  list-style: none;
   padding: 12px 14px;
   font-weight: 600;
   border-radius: 12px;
 }
-
 details.update-details > summary::-webkit-details-marker {
   display: none;
-} /* remove default marker */
-
+}
 details.update-details[open] > summary {
   border-bottom: 1px solid var(--border);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-
 .update-details .details-body {
   padding: 14px;
   color: var(--text);
   line-height: 1.6;
 }
-
 .update-details .details-body .media {
   margin-top: 10px;
 }
@@ -292,15 +319,14 @@ details.update-details[open] > summary {
   gap: 20px;
   margin-top: 16px;
 }
-
 .team-member {
   text-align: center;
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: 12px;
-  background: color-mix(in srgb, var(--card) 92%, var(--accent) 8%);
+  background: color-mix(in srgb, var(--card) 96%, var(--accent) 4%);
+  box-shadow: var(--shadow);
 }
-
 .team-member img {
   width: 100px;
   height: 100px;
@@ -309,12 +335,10 @@ details.update-details[open] > summary {
   border: 2px solid var(--border);
   margin-bottom: 10px;
 }
-
 .team-member h4 {
   margin: 0;
   font-size: 1rem;
 }
-
 .team-member p {
   margin: 4px 0 0;
   font-size: 0.85rem;
@@ -345,8 +369,8 @@ details.update-details[open] > summary {
   color: #1f7a3e;
 } /* Software */
 .chip.pm {
-  background: #eaf8ee;
-  color: #621f7a;
+  background: #f3e8ff;
+  color: #6e2bb0;
 } /* Project Management */
 
 /* Summary list alignment */
@@ -358,11 +382,12 @@ details.update-details[open] > summary {
 
 /* Details sections per discipline */
 .disc-block {
-  background: var(--section-bg, #1e2735); /* your lighter blue background */
-  color: #fff;
+  background: var(--section-bg);
+  color: var(--text);
   padding: 1rem;
   border-radius: 0.75rem;
   margin-bottom: 1rem;
+  border: 1px solid var(--border);
 }
 .disc-header {
   display: flex;
@@ -375,6 +400,14 @@ details.update-details[open] > summary {
   margin: 0;
   font-size: 1.05rem;
   font-weight: 600;
+}
+
+/* Subheading (“Summary”, etc.) */
+.subheading {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--muted);
 }
 
 /* Responsive media grid */
@@ -390,7 +423,7 @@ details.update-details[open] > summary {
   flex-direction: column;
   gap: 0.4rem;
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 0.5rem;
 }
@@ -400,50 +433,9 @@ details.update-details[open] > summary {
   height: auto;
   display: block;
   border-radius: 8px;
+  background: #f0f2f7;
 }
 .media-grid figcaption {
   font-size: 0.85rem;
-  color: var(--muted, #555);
-}
-
-.subheading {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--muted, #aaa);
-}
-
-/* Match disc-block background to the main card background */
-.disc-block {
-  background: var(--section-bg, #1e2735); /* replace with your blue-gray */
-  color: #fff;
-  padding: 1rem;
-  border-radius: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-/* Media grid for images/videos */
-.media-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 0.75rem;
-}
-
-.media-grid img,
-.media-grid video {
-  width: 100%;
-  border-radius: 0.5rem;
-  background: #000;
-}
-
-.roadmap-node .blurb,
-.roadmap-node .target {
-  font-size: 0.9rem;
-  color: #aaa; /* muted gray */
-  margin-top: 0.25rem;
-}
-
-.roadmap-node .target {
-  font-style: italic;
+  color: var(--muted);
 }
