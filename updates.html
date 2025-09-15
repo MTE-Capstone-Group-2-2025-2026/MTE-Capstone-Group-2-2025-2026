@@ -1,288 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Capstone — Weekly Updates</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Capstone — Weekly Updates</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <body>
-    <header>
-      <div class="header-inner">
-        <a class="brand" href="index.html"
-          ><span class="dot"></span> <span>Capstone</span></a
-        >
-        <nav class="nav" aria-label="Primary">
-          <a href="master-plan.html">Master Plan / Roadmap</a>
-          <a class="active" href="updates.html">Weekly Updates</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="container">
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html"
+      ><span class="dot"></span> <span>Capstone</span></a
+      >
+      <nav class="nav" aria-label="Primary">
+        <a href="master-plan.html">Master Plan / Roadmap</a>
+        <a class="active" href="updates.html">Weekly Updates</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="container">
+    <!-- BLOCKS -->
+    <section class="section">
       <!-- BLOCKS -->
-      <section class="section">
-        <!-- BLOCKS -->
-        <h2>Weekly Updates</h2>
-        <p class="muted">
-          Click a week card to jump to the detailed section below.
-        </p>
-
-        <div class="grid" role="list">
-          <!-- WEEK 1 -->
-          <a class="card" role="listitem" href="#week-1">
-            <div class="kicker">Week 1: Sept 1 - 7, 2025</div>
-            <h3>Finalize Team & Project Proposal</h3>
-            <p>Interviews, research, ideation</p>
-          </a>
-          <!-- WEEK 2 -->
-          <a class="card" role="listitem" href="#week-2">
-            <div class="kicker">Week 2: Sept 8 - 14, 2025</div>
-            <h3>Define Business Case</h3>
-            <p>
-              Background, problem statement, needs analysis, value proposition
-            </p>
-          </a>
-        </div>
-      </section>
-
-      <!-- BLOCK DETAILS -->
-      <section class="article">
+      <h2>Weekly Updates</h2>
+      <p class="muted">
+        Click a week card to jump to the detailed section below.
+      </p>
+      
+      <div class="grid" role="list">
+        <!-- Pre Fall 2025 -->
+        <a class="card" role="listitem" href="#week-0">
+          <div class="kicker">Pre Fall 2025</div>
+          <h3>Initial Investigations</h3>
+          <p>Interviews, research, ideation</p>
+        </a>
         <!-- WEEK 1 -->
-        <div id="week-1" class="section update-section">
-          <h2>Week 1 — Finalize Team and Project Proposal</h2>
-          <div class="meta">Date range: Sept 1 - 7, 2025</div>
-
-          <!-- Add summary heading -->
-          <h3 class="subheading">Summary</h3>
-          <ul class="summary-by-discipline">
-            <li>
-              <strong class="chip me">ME</strong> Short summary for mechanical
-              this week
-            </li>
-            <li>
-              <strong class="chip ee">EE</strong> Short summary for electrical
-              this week
-            </li>
-            <li>
-              <strong class="chip se">SE</strong> Short summary for software
-              this week
-            </li>
-            <li>
-              <strong class="chip pm">PM</strong> Short summary for project
-              management this week
-            </li>
-          </ul>
-
-          <details class="update-details">
-            <summary>Details</summary>
-            <div class="details-body">
-              <!-- ME -->
-              <section class="disc-block me-block">
-                <header class="disc-header">
-                  <span class="chip me">ME</span>
-                  <h3>Mechanical</h3>
-                </header>
-                <p>Long-form writeup for ME.</p>
-                <div class="media-grid">
-                  <img
-                    src="images/week13-me-1.jpg"
-                    alt="Mechanical photo example"
-                  />
-                  <video controls>
-                    <source src="videos/week13-me-demo.mp4" type="video/mp4" />
-                    Your browser does not support video.
-                  </video>
-                </div>
-              </section>
-
-              <!-- EE -->
-              <section class="disc-block ee-block">
-                <header class="disc-header">
-                  <span class="chip ee">EE</span>
-                  <h3>Electrical</h3>
-                </header>
-                <p>Long-form writeup for EE.</p>
-                <div class="media-grid">
-                  <img
-                    src="images/week13-ee-1.jpg"
-                    alt="Electrical photo example"
-                  />
-                  <video controls>
-                    <source src="videos/week13-ee-demo.mp4" type="video/mp4" />
-                    Your browser does not support video.
-                  </video>
-                </div>
-              </section>
-
-              <!-- SE -->
-              <section class="disc-block se-block">
-                <header class="disc-header">
-                  <span class="chip se">SE</span>
-                  <h3>Software</h3>
-                </header>
-                <p>Long-form writeup for SE.</p>
-                <div class="media-grid">
-                  <img
-                    src="images/week13-se-1.jpg"
-                    alt="Software screenshot example"
-                  />
-                  <video controls>
-                    <source src="videos/week13-se-demo.mp4" type="video/mp4" />
-                    Your browser does not support video.
-                  </video>
-                </div>
-              </section>
-
-              <!-- PM -->
-              <section class="disc-block se-block">
-                <header class="disc-header">
-                  <span class="chip pm">PM</span>
-                  <h3>Project Management</h3>
-                </header>
-                <p>Long-form writeup for PM and admin</p>
-                <div class="media-grid">
-                  <img
-                    src="images/week13-se-1.jpg"
-                    alt="Software screenshot example"
-                  />
-                  <video controls>
-                    <source src="videos/week13-se-demo.mp4" type="video/mp4" />
-                    Your browser does not support video.
-                  </video>
-                </div>
-              </section>
-            </div>
-          </details>
-
-          <p><a href="#">Back to top</a></p>
-        </div>
+        <a class="card" role="listitem" href="#week-1">
+          <div class="kicker">Week 1: Sept 1 - 7, 2025</div>
+          <h3>Finalize Team & Project Proposal</h3>
+          <p>Interviews, research, ideation</p>
+        </a>
         <!-- WEEK 2 -->
-        <div id="week-2" class="section update-section">
-          <h2>Week 2 — Define the Business Case</h2>
-          <div class="meta">Date range: Sept 8 - 14, 2025</div>
-
-          <!-- Add summary heading -->
-          <h3 class="subheading">Summary</h3>
-          <ul class="summary-by-discipline">
-            <li>
-              <strong class="chip me">ME</strong> Short summary for mechanical
-              this week
-            </li>
-            <li>
-              <strong class="chip ee">EE</strong> Short summary for electrical
-              this week
-            </li>
-            <li>
-              <strong class="chip se">SE</strong> Short summary for software
-              this week
-            </li>
-            <li>
-              <strong class="chip pm">PM</strong> Short summary for project
-              management this week
-            </li>
-          </ul>
-
-          <details class="update-details">
-            <summary>Details</summary>
-            <div class="details-body">
-              <!-- ME -->
-              <section class="disc-block me-block">
-                <header class="disc-header">
-                  <span class="chip me">ME</span>
-                  <h3>Mechanical</h3>
-                </header>
-                <p>Long-form writeup for ME.</p>
-                <div class="media-grid">
-                  <img
-                    src="images/week13-me-1.jpg"
-                    alt="Mechanical photo example"
-                  />
-                  <video controls>
-                    <source src="videos/week13-me-demo.mp4" type="video/mp4" />
-                    Your browser does not support video.
-                  </video>
-                </div>
-              </section>
-
-              <!-- EE -->
-              <section class="disc-block ee-block">
-                <header class="disc-header">
-                  <span class="chip ee">EE</span>
-                  <h3>Electrical</h3>
-                </header>
-                <p>Long-form writeup for EE.</p>
-                <div class="media-grid">
-                  <img
-                    src="images/week13-ee-1.jpg"
-                    alt="Electrical photo example"
-                  />
-                  <video controls>
-                    <source src="videos/week13-ee-demo.mp4" type="video/mp4" />
-                    Your browser does not support video.
-                  </video>
-                </div>
-              </section>
-
-              <!-- SE -->
-              <section class="disc-block se-block">
-                <header class="disc-header">
-                  <span class="chip se">SE</span>
-                  <h3>Software</h3>
-                </header>
-                <p>Long-form writeup for SE.</p>
-                <div class="media-grid">
-                  <img
-                    src="images/week13-se-1.jpg"
-                    alt="Software screenshot example"
-                  />
-                  <video controls>
-                    <source src="videos/week13-se-demo.mp4" type="video/mp4" />
-                    Your browser does not support video.
-                  </video>
-                </div>
-              </section>
-
-              <!-- PM -->
-              <section class="disc-block se-block">
-                <header class="disc-header">
-                  <span class="chip pm">PM</span>
-                  <h3>Project Management</h3>
-                </header>
-                <p>Long-form writeup for PM and admin</p>
-                <div class="media-grid">
-                  <img
-                    src="images/week13-se-1.jpg"
-                    alt="Software screenshot example"
-                  />
-                  <video controls>
-                    <source src="videos/week13-se-demo.mp4" type="video/mp4" />
-                    Your browser does not support video.
-                  </video>
-                </div>
+        <a class="card" role="listitem" href="#week-2">
+          <div class="kicker">Week 2: Sept 8 - 14, 2025</div>
+          <h3>Define Business Case</h3>
+          <p>
+            Background, problem statement, needs analysis, value proposition
+          </p>
+        </a>
+      </div>
+    </section>
+    
+    <!-- BLOCK DETAILS -->
+    <section class="article">
+      
+      <!-- Week 0 -->
+      <div id="week-0" class="section update-section">
+        <h2>Pre Fall 2025 — Initial Investigations</h2>
+        <div class="meta">Date range: Summer 2025</div>
+        
+        <!-- Add summary heading -->
+        <h3 class="subheading">Summary</h3>
+        <ul class="summary-by-discipline">
+          <li>
+            <strong class="chip pm">PM</strong> Figure out teams vibe and
+            talked with initial stakeholders
+          </li>
+        </ul>
+        
+        <details class="update-details">
+          <summary>Details</summary>
+          <div class="details-body">
+            
+            <!-- PM -->
+            <section class="disc-block se-block">
+              <header class="disc-header">
+                <span class="chip pm">PM</span>
+                <h3>Project Management</h3>
+              </header>
+              <p>
+                <ul>
+                  <li>Meeting with Lili's URA professor
+                    <ul>
+                      <li>Learned about end effectors and social robotics</li>
+                      <li>Advised: here is a solution, research a need for it</li>
+                    </ul>
+                  </li>
+                  <li>Talked with Nat's Dad about Medtech needs and brainstorming
+                    <ul>
+                      <li>Improving single-use items in the operating room</li>
+                      <li>Re-designing cleaning processes that rely heavily on human involvement</li>
+                      <li>Sorting out single-use vs. reusable items</li>
+                      <li>Surgical loupe redesign for improved ergonomics and functionality</li>
+                    </ul>
+                  </li>
+                </ul>
+                
+              </p>
+            </section>
+          </div>
+        </details>
+        
+        <p><a href="#">Back to top</a></p>
+      </div>
+      
+      <!-- WEEK 1 -->
+      <div id="week-1" class="section update-section">
+        <h2>Week 1 — Finalize Team and Project Proposal</h2>
+        <div class="meta">Date range: Sept 1 - 7, 2025</div>
+        
+        <!-- Add summary heading -->
+        <h3 class="subheading">Summary</h3>
+        <ul class="summary-by-discipline">
+          <li>
+            <strong class="chip pm">PM</strong> Problem Exploration, Outreach, Project Infrastructure
+          </li>
+        </ul>
+        
+        <details class="update-details">
+          <summary>Details</summary>
+          <div class="details-body">
+            
+            <!-- PM -->
+            <section class="disc-block se-block">
+              <header class="disc-header">
+                <span class="chip pm">PM</span>
+                <h3>Project Management</h3>
+              </header>
+              <p>
+                <h2>Key Takeaway for the Week</h2>
+                <p>We are exploring 5 ideas and plan to narrow it down to 2 after considering many factors including testing feasaibility, problem scope, risk, etc. Li Ion Battery fires seem to be a huge issue for many reasons...but what can we do about it? Stay tuned! </p>
+                <h2>Ideation and Problem Exploration</h2>
+                <ul>
+                  <li>Team held an ideation session at Grad House over pizza and beer.</li>
+                  <li>Each member prepared a slide on a chosen problem space:
+                    <ul>
+                      <li>Nick: Lithium-ion battery fires</li>
+                      <li>Natalie: Surgical loupes</li>
+                      <li>Nathan: Artificial pollination</li>
+                      <li>Lili: Mining and fish farms (shifted focus to fish farms)</li>
+                      <li>Chelsea: Women's health (vaginal diagnostic testing)</li>
+                    </ul>
+                  </li>
+                </ul>
+                
+                <h2>Outreach and External Input</h2>
+                <ul>
+                  <li>Nick spoke with two Waterloo firefighters (Ryan and Wendy).
+                    <ul>
+                      <li>Key takeaways from Wendy:
+                        <ul>
+                          <li>Lithium-ion fires are a major concern, discussed almost daily.</li>
+                          <li>Clear training and equipment gaps; strong demand for solutions.</li>
+                          <li>High interest in collaboration with our team.</li>
+                          <li>Seen as Waterloo's #1 local development need with growing population.</li>
+                          <li>Example: crew had to throw a burning scooter off a balcony after thermal runaway.</li>
+                          <li>End-of-life disposal of li-ion batteries flagged as a major issue.</li>
+                        </ul>
+                      </li>
+                      <li>Wendy is facilitating a meeting with the Deputy Fire Chief of Waterloo and Platoon Chief of Waterloo (Date TBD).</li>
+                    </ul>
+                  </li>
+                  <li>Nick also connected with Patrick Durham (Michigan firefighting captain, StacheD Training on YouTube, Mechanical Engineering degree).
+                    <ul>
+                      <li>Confirmed training quality varies heavily and readiness depends on it.</li>
+                      <li>“Letting it burn” often only burns gases; the fuel source remains.</li>
+                      <li>FSRI researching water runoff impacts (HF, heavy metals).</li>
+                      <li>Malaysian study shows high heavy-metal runoff; NIOSH studying long/short-term health effects.</li>
+                      <li>EV end-of-life is highly uncertain; no established process.</li>
+                      <li>Expressed interest in acting as an advisor/partner.</li>
+                    </ul>
+                  </li>
+                </ul>
+                
+                <h2>Infrastructure Setup</h2>
+                <ul>
+                  <li>Nick: Built team website.</li>
+                  <li>Chelsea: Created team Confluence page.</li>
+                </ul>
+                
+              </p>
+            </section>
+          </div>
+        </details>
+        
+        <p><a href="#">Back to top</a></p>
+      </div>
+      
+      <!-- WEEK 2 -->
+      <div id="week-2" class="section update-section">
+        <h2>Week 2 — Define the Business Case</h2>
+        <div class="meta">Date range: Sept 8 - 14, 2025</div>
+        
+        <!-- Add summary heading -->
+        <h3 class="subheading">Summary</h3>
+        <ul class="summary-by-discipline">
+          <li>
+            <strong class="chip pm">PM</strong> Problem Scoping, Industry and Expert Input, Funding Research, Infastruture Improvements
+          </li>
+        </ul>
+        
+        <details class="update-details">
+          <summary>Details</summary>
+          <div class="details-body">
+            
+            
+            <!-- PM -->
+            <section class="disc-block se-block">
+              <header class="disc-header">
+                <span class="chip pm">PM</span>
+                <h3>Project Management</h3>
+              </header>
+              <p>
+                <h2>Key Takeaway for the Week</h2>
+                <p>We narrowed our focus to two frontrunners — lithium-ion fire suppression and surgical loupes. 
+                  The team is leaning toward the fire suppression space despite the higher risk and uncertainty, 
+                  as the potential impact is exciting. At the same time, we are continuing to explore funding and 
+                  advisory support, keeping surgical loupes as a strong alternative if feasibility becomes a barrier.</p>
+                  
+                  <h2>Project Narrowing & Scope</h2>
+                  <ul>
+                    <li>Consulted with professors, who emphasized testing feasibility as a key filter.</li>
+                    <li>Ruled out fish, pollination, and women's health due to difficulty or lack of expertise.</li>
+                    <li>Used a decision matrix to narrow frontrunners to lithium-ion fire suppression and surgical loupes.</li>
+                  </ul>
+                  
+                  <h2>Research & Expert Input</h2>
+                  <ul>
+                    <li>Met with Prof. Vinny Gupta:
+                      <ul>
+                        <li>Noted suppression research is often “too late,” though firefighters stressed they feel unprepared.</li>
+                        <li>Sparked ideas around safer building materials and assistive tech for firefighters.</li>
+                        <li>Identified possibility of leveraging ongoing fire lab experiments for testing feasibility.</li>
+                      </ul>
+                    </li>
+                    <li>Natalie researched potential professor references for the surgical loupe project.</li>
+                  </ul>
+                  
+                  <h2>Funding & Opportunities</h2>
+                  <ul>
+                    <li>Applied to Cornerstone with both frontrunner ideas.</li>
+                    <li>Applied to Upstart with lithium-ion fire suppression.</li>
+                    <li>Explored internal and external funding opportunities and planned for upcoming deadlines.</li>
+                  </ul>
+                  
+                  <h2>Team Infrastructure & Admin</h2>
+                  <ul>
+                    <li>Advanced team website to ~60% completion.</li>
+                    <li>Attended Cornerstone ideation session (minimal impact).</li>
+                    <li>Planned upcoming meetings and aligned on next steps.</li>
+                  </ul>
+                  
+                </p>
               </section>
             </div>
           </details>
-
+          
           <p><a href="#">Back to top</a></p>
         </div>
         <!-- ADD FUTURE WEEKS BELOW -->
+        
+        <!-- TEMPLATE FOR LATER -->
+        <div id="week-3" class="section update-section">
+          <h2>Week 3 — IN PROGRESS</h2>
+          <div class="meta">Date range: Sept 15 - 21, 2025</div>
+          
+          <!-- Add summary heading -->
+          <h3 class="subheading">Summary</h3>
+          <ul class="summary-by-discipline">
+            <li>
+              <strong class="chip me">ME</strong> Short summary for mechanical
+              this week
+            </li>
+            <li>
+              <strong class="chip ee">EE</strong> Short summary for electrical
+              this week
+            </li>
+            <li>
+              <strong class="chip se">SE</strong> Short summary for software
+              this week
+            </li>
+            <li>
+              <strong class="chip pm">PM</strong> Short summary for project
+              management this week
+            </li>
+          </ul>
+          
+          <details class="update-details">
+            <summary>Details</summary>
+            <div class="details-body">
+              <!-- ME -->
+              <section class="disc-block me-block">
+                <header class="disc-header">
+                  <span class="chip me">ME</span>
+                  <h3>Mechanical</h3>
+                </header>
+                <p>Long-form writeup for ME.</p>
+                <div class="media-grid">
+                  <img
+                  src="images/week13-me-1.jpg"
+                  alt="Mechanical photo example"
+                  />
+                  <video controls>
+                    <source src="videos/week13-me-demo.mp4" type="video/mp4" />
+                    Your browser does not support video.
+                  </video>
+                </div>
+              </section>
+              
+              <!-- EE -->
+              <section class="disc-block ee-block">
+                <header class="disc-header">
+                  <span class="chip ee">EE</span>
+                  <h3>Electrical</h3>
+                </header>
+                <p>Long-form writeup for EE.</p>
+                <div class="media-grid">
+                  <img
+                  src="images/week13-ee-1.jpg"
+                  alt="Electrical photo example"
+                  />
+                  <video controls>
+                    <source src="videos/week13-ee-demo.mp4" type="video/mp4" />
+                    Your browser does not support video.
+                  </video>
+                </div>
+              </section>
+              
+              <!-- SE -->
+              <section class="disc-block se-block">
+                <header class="disc-header">
+                  <span class="chip se">SE</span>
+                  <h3>Software</h3>
+                </header>
+                <p>Long-form writeup for SE.</p>
+                <div class="media-grid">
+                  <img
+                  src="images/week13-se-1.jpg"
+                  alt="Software screenshot example"
+                  />
+                  <video controls>
+                    <source src="videos/week13-se-demo.mp4" type="video/mp4" />
+                    Your browser does not support video.
+                  </video>
+                </div>
+              </section>
+              
+              <!-- PM -->
+              <section class="disc-block se-block">
+                <header class="disc-header">
+                  <span class="chip pm">PM</span>
+                  <h3>Project Management</h3>
+                </header>
+                <p>Long-form writeup for PM and admin</p>
+                <div class="media-grid">
+                  <img
+                  src="images/week13-se-1.jpg"
+                  alt="Software screenshot example"
+                  />
+                  <video controls>
+                    <source src="videos/week13-se-demo.mp4" type="video/mp4" />
+                    Your browser does not support video.
+                  </video>
+                </div>
+              </section>
+            </div>
+          </details>
+          
+          <p><a href="#">Back to top</a></p>
+        </div>
       </section>
     </main>
-
+    
     <footer>© <span id="year"></span> Capstone Team</footer>
-
+    
     <script>
       // Year stamp
       document.getElementById("year").textContent = new Date().getFullYear();
-
+      
       // Optional: flash highlight on target after clicking a card
       function flash(el) {
         if (!el) return;
         el.style.transition = "background 0.2s ease";
         el.style.background =
-          "color-mix(in srgb, var(--accent) 12%, transparent)";
+        "color-mix(in srgb, var(--accent) 12%, transparent)";
         setTimeout(() => {
           el.style.background = "";
         }, 400);
@@ -298,12 +401,13 @@
           setTimeout(() => flash(t), 250);
         });
       });
-
+      
       // Mark active tab
       for (const a of document.querySelectorAll(".nav a")) {
         if (location.pathname.endsWith(a.getAttribute("href")))
-          a.classList.add("active");
+        a.classList.add("active");
       }
     </script>
   </body>
-</html>
+  </html>
+  

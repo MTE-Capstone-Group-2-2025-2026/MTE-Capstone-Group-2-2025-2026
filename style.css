@@ -439,3 +439,24 @@ details.update-details[open] > summary {
   font-size: 0.85rem;
   color: var(--muted);
 }
+
+/* Top-level list */
+ul {
+  list-style-type: disc; /* solid circle */
+  margin-left: 1.2rem;
+  padding-left: 1rem;
+}
+
+/* Second-level list */
+ul ul {
+  list-style-type: circle; /* hollow circle */
+  margin-left: 1.2rem;
+  padding-left: 1rem;
+}
+
+/* Third-level list (if ever needed) */
+ul ul ul {
+  list-style-type: square; /* small solid square */
+  margin-left: 1.2rem;
+  padding-left: 1rem;
+}
