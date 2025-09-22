@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Capstone — Home</title>
+    <title>Capstone - Home</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -11,7 +11,7 @@
     <header>
       <div class="header-inner">
         <a class="brand" href="index.html" aria-label="Go to Home">
-          <span class="dot"></span> <span>Capstone</span>
+          <span class="dot"></span> <span>ProLoupes</span>
         </a>
         <nav class="nav" aria-label="Primary">
           <a href="master-plan.html">Master Plan</a>
@@ -20,24 +20,39 @@
       </div>
     </header>
 
-    <main class="container">
+    <main>
       <section class="hero">
-        <h1>Problem Statement</h1>
-        <p>Summarize the business case. Test</p>
-        <a class="cta" href="master-plan.html"
-          >llick Me for The Master Plan →</a
-        >
+        <div class="overlay">
+          <h1>Loupes Built for Today's Surgeon</h1>
+          <p>
+            With ProLoupes, surgeons gain comfort, clarity, and control - so
+            they can operate longer, see sharper, and easily communicate with
+            their team.
+          </p>
+          <p>
+            Ultimately, ProLoupes help surgeons operate at their best - for
+            themselves, their teams, and their patients.
+          </p>
+          <a href="master-plan.html" class="cta">
+            Learn Why We Are Rethinking Surgical Vision
+          </a>
+        </div>
       </section>
     </main>
 
-    <footer>© <span id="year"></span> Capstone Team</footer>
+    <footer>
+      <p style="margin: 0">
+        Researched, Designed, and Built in Canada
+        <span style="color: #e63946; font-size: 1.2em">&#127809;</span>
+      </p>
+    </footer>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-      // Active tab
+      // Active tab highlight
       for (const a of document.querySelectorAll(".nav a")) {
-        if (location.pathname.endsWith(a.getAttribute("href")))
+        if (location.pathname.endsWith(a.getAttribute("href"))) {
           a.classList.add("active");
+        }
       }
     </script>
   </body>

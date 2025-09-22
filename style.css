@@ -11,6 +11,12 @@
   --radius: 16px;
   --shadow: 0 6px 24px rgba(30, 36, 48, 0.08);
   --section-bg: color-mix(in srgb, var(--accent) 4%, #ffffff);
+
+  --node-w: 170px; /* card width */
+  --node-h: 260px; /* card height */
+  --arrow-min: 6px;
+  --arrow-max: 44px;
+  --rail-gap: 8px;
 }
 
 * {
@@ -103,30 +109,44 @@ header {
 
 /* Main */
 main {
-  padding: 24px;
+  padding: 0; /* let hero fill width */
 }
 
 /* Hero */
 .hero {
+  background: url(Media/Photos/General/hero\ background.png) no-repeat center
+    center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* left align */
   padding: 42px;
-  border: 1px solid var(--border);
-  background: var(--card);
+  position: relative;
+  color: white;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
+  padding: 40px;
   border-radius: var(--radius);
-  line-height: 1.6;
+  max-width: 600px;
   box-shadow: var(--shadow);
 }
+
 .hero h1 {
   margin: 0 0 12px;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 .hero p {
-  color: var(--muted);
   margin: 0 0 16px;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 .cta {
   display: inline-block;
-  margin-top: 8px;
-  padding: 10px 14px;
+  margin-top: 12px;
+  padding: 12px 20px;
   border-radius: 10px;
   background: var(--accent);
   color: #fff;
@@ -205,53 +225,111 @@ main {
   background: #f0f2f7;
 }
 
-/* Roadmap diagram */
+/* ==== Roadmap ==== */
 .roadmap-diagram {
-  border: 2px solid var(--border); /* solid border (not dotted) */
+  border: 2px solid var(--border);
   background: color-mix(in srgb, var(--accent) 6%, var(--card) 94%);
   border-radius: var(--radius);
-  padding: 20px;
-  margin: 24px 0;
+  padding-block: 20px;
+  margin: 24px auto;
+  padding-inline: 0;
+  width: 100%;
 }
+
 .roadmap-rail {
   display: flex;
-  gap: 12px;
-  overflow: auto;
-  padding: 6px 2px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap !important;
+  gap: var(--rail-gap);
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: #f5f9ff;
+  overflow-x: auto;
 }
+
 .roadmap-node {
-  flex: 0 0 200px;
-  padding: 12px;
+  flex: 1 1 clamp(140px, 18vw, 190px);
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #fff;
   border: 1px solid var(--border);
   border-radius: 12px;
-  background: var(--card);
   text-align: center;
+  padding: 12px 10px;
   box-shadow: var(--shadow);
 }
 
-/* Phase number (underlined) and Title — bigger & dark for light mode */
 .roadmap-node .phase,
 .roadmap-node .desc {
   font-weight: 700;
   color: var(--text);
-  font-size: 1.3rem;
-  margin-top: 6px;
-  margin-bottom: 0.25rem;
+  font-size: 1.15rem;
+  margin: 6px 0 4px;
   text-align: center;
 }
 .roadmap-node .phase {
   text-decoration: underline;
 }
-
-/* Blurb + target (muted and small; target italic only) */
 .roadmap-node .blurb,
 .roadmap-node .target {
   font-size: 0.9rem;
   color: var(--muted);
-  margin-top: 0.25rem;
+  margin-top: 4px;
 }
 .roadmap-node .target {
   font-style: italic;
+}
+
+.roadmap-arrow {
+  flex: 1 1 24px;
+  min-width: 4px;
+
+  color: #555;
+  font-weight: bold;
+
+  align-self: center;
+  display: block;
+}
+
+.roadmap-arrow::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 10px solid #6b7280;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+@media (max-width: 980px) {
+  .roadmap-rail {
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+  .roadmap-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .roadmap-node {
+    flex-basis: 170px;
+    padding: 12px 10px;
+  }
+  .roadmap-arrow {
+    width: 38px;
+    height: 9px;
+  }
+  .roadmap-arrow::after {
+    right: -10px;
+    border-left-width: 10px;
+  }
 }
 
 /* Anchor target highlight */
@@ -277,10 +355,20 @@ footer {
 @media (max-width: 600px) {
   .hero {
     padding: 28px;
+    height: auto; /* let content size the hero */
+  }
+  .hero .overlay {
+    padding: 24px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
   }
 }
 
-/* --- Weekly Details blocks --- */
+/* Weekly Details blocks */
 details.update-details {
   margin-top: 14px;
   border: 1px solid var(--border);
@@ -359,42 +447,43 @@ details.update-details[open] > summary {
 .chip.me {
   background: #e6f2ff;
   color: #0b63b6;
-} /* Mechanical */
+}
 .chip.ee {
   background: #fff1e6;
   color: #b65a0b;
-} /* Electrical */
+}
 .chip.se {
   background: #eaf8ee;
   color: #1f7a3e;
-} /* Software */
+}
 .chip.pm {
   background: #f3e8ff;
   color: #6e2bb0;
-} /* Project Management */
+}
 
-/* Summary list alignment */
 .summary-by-discipline li {
   display: flex;
   gap: 0.5rem;
   align-items: baseline;
 }
 
-/* Details sections per discipline */
+/* Discipline blocks */
 .disc-block {
   background: var(--section-bg);
-  color: var(--text);
+  /*color: var(--text);*/
   padding: 1rem;
   border-radius: 0.75rem;
   margin-bottom: 1rem;
   border: 1px solid var(--border);
 }
 .disc-header {
+  background: var(--section-bg);
+  margin: -0.5rem -0.5rem 0.5rem; /* pull to edges, so no white gap */
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem; /* soften edges */
   display: flex;
-  gap: 0.5rem;
   align-items: center;
-  margin-bottom: 0.5rem;
-  background: transparent;
+  gap: 0.5rem;
 }
 .disc-header h3 {
   margin: 0;
@@ -402,7 +491,6 @@ details.update-details[open] > summary {
   font-weight: 600;
 }
 
-/* Subheading (“Summary”, etc.) */
 .subheading {
   margin-top: 1rem;
   font-size: 1.1rem;
@@ -410,7 +498,7 @@ details.update-details[open] > summary {
   color: var(--muted);
 }
 
-/* Responsive media grid */
+/* Media grid */
 .media-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -440,23 +528,58 @@ details.update-details[open] > summary {
   color: var(--muted);
 }
 
-/* Top-level list */
+/* Lists */
 ul {
-  list-style-type: disc; /* solid circle */
+  list-style-type: disc;
   margin-left: 1.2rem;
   padding-left: 1rem;
 }
-
-/* Second-level list */
 ul ul {
-  list-style-type: circle; /* hollow circle */
+  list-style-type: circle;
+  margin-left: 1.2rem;
+  padding-left: 1rem;
+}
+ul ul ul {
+  list-style-type: square;
   margin-left: 1.2rem;
   padding-left: 1rem;
 }
 
-/* Third-level list (if ever needed) */
-ul ul ul {
-  list-style-type: square; /* small solid square */
-  margin-left: 1.2rem;
-  padding-left: 1rem;
+.media img.img-small {
+  max-width: 300px; /* control width */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* centers the image */
+}
+
+.media figcaption {
+  font-style: italic;
+  text-align: center;
+  font-size: 0.9rem; /* optional: slightly smaller */
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+/* Centered, stacked figure variant for single images */
+.media--stack {
+  display: block; /* stop flex behavior */
+  text-align: center; /* center caption fallback */
+  margin: 16px auto; /* nice spacing */
+  max-width: 520px; /* keep figure from going too wide */
+}
+
+.media--stack img.img-small {
+  max-width: 320px; /* control image size */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* center the image */
+  border-radius: 12px; /* optional, looks good with your style */
+}
+
+.media--stack figcaption {
+  font-style: italic;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 6px;
+  color: var(--muted);
 }
