@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Capstone - Weekly Updates</title>
+  <title>DigiLoupes - Weekly Updates</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -11,7 +11,7 @@
   <header>
     <div class="header-inner">
       <a class="brand" href="index.html"
-      ><span class="dot"></span> <span>ProLoupes</span></a
+      ><span class="dot"></span> <span>DigiLoupes</span></a
       >
       <nav class="nav" aria-label="Primary">
         <a href="master-plan.html">Master Plan</a>
@@ -50,11 +50,20 @@
             Background, problem statement, needs analysis, value proposition
           </p>
         </a>
+        <!-- WEEK 3 -->
         <a class="card" role="listitem" href="#week-3">
           <div class="kicker">Week 3: Sept 15 - 21, 2025</div>
-          <h3>Requirements, Constraints, Criteria</h3>
+          <h3>Preliminary Designs and Patent Search</h3>
           <p>
             RCC, Business Case, Stakeholder Outreach
+          </p>
+        </a>
+        <!-- WEEK 4 -->
+        <a class="card" role="listitem" href="#week-4">
+          <div class="kicker">Week 4: Sept 22 - 28, 2025</div>
+          <h3>Requirements, Constraints, Criteria</h3>
+          <p>
+            Outline at least 4 design solutions and at least 3 patents
           </p>
         </a>
       </div>
@@ -343,6 +352,162 @@
               <ul>
                 <li>Updated team website (@Nicholas Drazso).</li>
               </ul>
+              
+              <h2>Requirements, Constraints, Criteria</h2>
+              <!-- BEGIN: Objectives / Constraints / Criteria table -->
+              <div class="table-wrap">
+                <table class="rcc-table">
+                  <thead>
+                    <tr>
+                      <th>Need</th>
+                      <th>Functions &amp; Design Goals</th>
+                      <th>Requirements</th>
+                      <th>Constraints</th>
+                      <th>Criteria</th>
+                    </tr>
+                  </thead>
+                  
+                  <tbody>
+                    <!-- Ergonomics -->
+                    <tr>
+                      <td><strong>Ergonomics</strong></td>
+                      <td>
+                        <ul>
+                          <li>Maintain neutral posture to reduce musculoskeletal strain.</li>
+                          <li>Remain lightweight and compatible with operating room workflow.</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Neck flexion angle during use &le; 20&deg; [degrees]</li>
+                          <li>Loupe must maintain center of gravity within &plusmn;1 cm of head centerline [cm]</li>
+                          <li>Allow for prescription inserts as per industry standard [pass/fail]</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Weight &lt; 500 g [g]</li>
+                          <li>Center of mass &lt; 5 cm from forehead [cm]</li>
+                          <li>Device temperature rise &le; 5 &deg;C during operation [degrees celcius]</li>
+                          <li>Ingress protection &ge; IP64 [pass/fail]</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Longevity of comfort</li>
+                          <li>General comfort</li>
+                          <li>Device weight [g]</li>
+                          <li>Fit adjustability [mm]</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    
+                    <!-- Data Streaming -->
+                    <tr>
+                      <td><strong>Data Streaming</strong></td>
+                      <td>
+                        <ul>
+                          <li>Enable sharing of user’s view with operating team for increased efficiency.</li>
+                          <li>Diagnostic overlays.</li>
+                          <li>Education improvement.</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Latency of shared video display &lt; 1 s [s]</li>
+                          <li>Shared display resolution &ge; 1080p at 60 fps with colour accuracy &Delta;E &lt; 3</li>
+                          <li>One-action start within 2 s from sterile controls [pass/fail]</li>
+                          <li>Shared view maintains surgeon’s magnification [pass/fail]</li>
+                          <li>Allow recording in full resolution [pass/fail]</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Disinfectable on all surfaces</li>
+                          <li>&ge; 1 hr continuous operation on a single charge.</li>
+                          <li>EMI compliant (IEC 60601-1-2).</li>
+                          <li>Wired/wireless display compatible.</li>
+                          <li>Cannot interfere with users' display.</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Latency &amp; video quality (ms, fps, resolution).</li>
+                          <li>Run time [h]</li>
+                          <li>Safety in OR</li>
+                          <li>Display overlay functionality</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    
+                    <!-- Data Collection -->
+                    <tr>
+                      <td><strong>Data Collection</strong></td>
+                      <td>
+                        <ul>
+                          <li>Capture pictures and video for AI training, medical records, and education.</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Take 1 photo on command.</li>
+                          <li>Save 1 photo to memory.</li>
+                          <li>Store 10 s video at 1080p.</li>
+                          <li>Handsfree activation for user.</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Minimum storage 256 MB on device.</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Image Quality</li>
+                          <li>UX</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    
+                    <!-- Optical Quality -->
+                    <tr>
+                      <td><strong>Optical Quality</strong></td>
+                      <td>
+                        <ul>
+                          <li>Adjustable, high-quality magnification.</li>
+                          <li>Provide 3D and wide FOV.</li>
+                          <li>Low latency &amp; high colour accuracy.</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Two or more magnification levels (e.g., 2.5&times;, 5&times;) adjustable in &lt; 2 s.</li>
+                          <li>FOV at least industry standard.</li>
+                          <li>Adjustable brightness control (ON/OFF).</li>
+                          <li>Modular LED headlight &ge; 30 kilolux.</li>
+                          <li>Depth of field &ge; 20 mm at 50 cm working distance.</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Magnification switching must not require hand removal from sterile field.</li>
+                          <li>Optical distortion &le; 5% at 2.5&times; magnification.</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Field of view</li>
+                          <li>Depth of view</li>
+                          <li>Ease of adjusting headlight brightness [# clicks]</li>
+                          <li>Headlight brightness [kilolux]</li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- END: Objectives / Constraints / Criteria table -->
+              
             </section>
           </div>
         </details>
@@ -350,9 +515,500 @@
         <p><a href="#">Back to top</a></p>
       </div>
       
-      
       <!-- TEMPLATE FOR LATER -->
       <div id="week-4" class="section update-section">
+        <h2>Week 4 - morphological Chart and Patents</h2>
+        <div class="meta">Date range: Sept 22 - 28, 2025</div>
+        
+        <!-- Add summary heading -->
+        <h3 class="subheading">Summary</h3>
+        <ul class="summary-by-discipline">
+          <li>
+            <strong class="chip pm">PM</strong> RCC refinement, stakeholder meetings, patent search, morphological chart  
+          </li>
+        </ul>
+        
+        <details class="update-details">
+          <summary>Details</summary>
+          <div class="details-body">
+            
+            <!-- PM -->
+            <section class="disc-block se-block">
+              
+              <header class="disc-header">
+                <span class="chip pm">PM</span>
+                <h3>Project Management</h3>
+              </header>
+              
+              <!-- BEGIN: Project Management Weekly Update -->
+              <h2>Project Management</h2>
+
+              <h3>Key Takeaway</h3>
+              <p>
+                This week, the team solidified its identity with the <strong>DigiLoupes</strong> name, advanced technical ideation through morphological charts and patent reviews, and built strong momentum in stakeholder outreach—positioning us for well-informed design decisions in the weeks ahead.
+              </p>
+              
+              <h3>Team Progress</h3>
+              <ul>
+                <li><strong>Finalized product name:</strong> DigiLoupes (@team)</li>
+                <li>Refined requirements, constraints, and criteria (@team)</li>
+                <li>Created morphological chart drawings (@Nathan Kindred Rowe)</li>
+                <li>Developed four design concepts for morphological chart (@team)</li>
+                <li>Completed patent research (@Lili Strong)</li>
+              </ul>
+              
+              <h3>Stakeholder Engagement</h3>
+              <ul>
+                <li>Met with Dr. Marc Sakwa and Dr. Andrew Nguyen to better understand stakeholder needs (@Chelsea Dmytryk, @Natalie Tsang, @Nicholas Drazso, @Nathan Kindred Rowe)</li>
+                <li>Met with Mark Greget (NuLoupes) (@Chelsea Dmytryk, @Natalie Tsang, @Nicholas Drazso, @Nathan Kindred Rowe)</li>
+                <li>Scheduled meetings with additional stakeholders (@Natalie Tsang)</li>
+                <li>Attended biomedical stakeholder workshop (@Chelsea Dmytryk, @Natalie Tsang, @Nathan Kindred Rowe, @Nicholas Drazso)</li>
+              </ul>
+              
+              <h3>Team Development & Admin</h3>
+              <ul>
+                <li>Attended Cornerstone session (@Nathan Kindred Rowe)</li>
+                <li>Applied for Engineers of the Future Fund (@Chelsea Dmytryk, @Natalie Tsang, @Nicholas Drazso, @Nathan Kindred Rowe)</li>
+                <li>Investigated Gantt chart software (@Chelsea Dmytryk, @Nicholas Drazso)</li>
+                <li>Updated website (@Nicholas Drazso)</li>
+                <li>Created team Confluence page (@Chelsea Dmytryk)</li>
+              </ul>
+              
+            
+              <!-- END: Project Management Weekly Update -->
+              
+              
+              <!-- BEGIN: Morphological Chart -->
+              <!-- BEGIN: Functional Component Ideation Table -->
+              <h2>Functional Component Ideation</h2>         
+              <div class="table-wrap">
+                <table class="rcc-table">
+                  <thead>
+                    <tr>
+                      <th>Component Identifier</th>
+                      <th>Components</th>
+                      <th>1</th>
+                      <th>2</th>
+                      <th>3</th>
+                      <th>4</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>A</td>
+                      <td><strong>Head Attachment</strong></td>
+                      <td>Glasses</td>
+                      <td>Elastic</td>
+                      <td>Plastic Adjustable w twisty (bicycle)</td>
+                      <td>Flat Back Style</td>
+                    </tr>
+                    <tr>
+                      <td>B</td>
+                      <td><strong>Camera</strong></td>
+                      <td>Buy Stereoscopic Camera</td>
+                      <td>Single Camera</td>
+                      <td>Two Cameras + Software for 3D</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>C</td>
+                      <td><strong>Display</strong></td>
+                      <td>2 screen</td>
+                      <td>1 screen + divider</td>
+                      <td>Projectors onto lens</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>D</td>
+                      <td><strong>Internal Communication</strong></td>
+                      <td>Wired</td>
+                      <td>Wireless</td>
+                      <td>Hybrid</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>E</td>
+                      <td><strong>Streaming to OR display</strong></td>
+                      <td>Wired</td>
+                      <td>Wireless</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>F</td>
+                      <td><strong>Control</strong></td>
+                      <td>Voice</td>
+                      <td>Foot Pedal</td>
+                      <td>3rd Party</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>G</td>
+                      <td><strong>Power</strong></td>
+                      <td>Battery box</td>
+                      <td>Wired to wall</td>
+                      <td>Integrated on head</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>H</td>
+                      <td><strong>Illumination</strong></td>
+                      <td>LED chip</td>
+                      <td>Headlight</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- END: Functional Component Ideation table -->
+              
+              <!-- BEGIN: Preliminary Design Themes -->
+              <h2>4 Design Themes with Component Selection</h2>
+              
+              <div class="design-themes">
+                
+                <!-- Cheapest -->
+                <div class="design-theme">
+                  <h3>Cheap</h3>
+                  <ul>
+                    <li><strong>A2</strong> - Elastic Head Attachment</li>
+                    <li><strong>B2</strong> - Single Camera</li>
+                    <li><strong>C2</strong> - 1 screen + divider</li>
+                    <li><strong>D1</strong> - Wired Internal Communication</li>
+                    <li><strong>E1</strong> - Wired Streaming</li>
+                    <li><strong>F3</strong> - 3rd Party Control</li>
+                    <li><strong>G2</strong> - Wired to wall Power</li>
+                    <li><strong>H1</strong> - LED chip Illumination</li>
+                  </ul>
+                </div>
+                
+                <!-- Comfy -->
+                <div class="design-theme">
+                  <h3>Ergonomic</h3>
+                  <ul>
+                    <li><strong>A4</strong> - Flat Back Style Head Attachment</li>
+                    <li><strong>B2</strong> - Single Camera</li>
+                    <li><strong>C3</strong> - Projectors onto lens</li>
+                    <li><strong>D2</strong> - Wireless Internal Communication</li>
+                    <li><strong>E2</strong> - Wireless Streaming</li>
+                    <li><strong>F2</strong> - Foot Pedal Control</li>
+                    <li><strong>G1</strong> - Battery box Power</li>
+                    <li><strong>H1</strong> - LED chip Illumination</li>
+                  </ul>
+                </div>
+                
+                <!-- Optical AMAZING -->
+                <div class="design-theme">
+                  <h3>Optical Quality</h3>
+                  <ul>
+                    <li><strong>A4</strong> - Flat Back Style Head Attachment</li>
+                    <li><strong>B1</strong> - Buy Stereoscopic Camera</li>
+                    <li><strong>C1</strong> - 2 screen Display</li>
+                    <li><strong>D1</strong> - Wired Internal Communication</li>
+                    <li><strong>E1</strong> - Wired Streaming</li>
+                    <li><strong>F2</strong> - Foot Pedal Control</li>
+                    <li><strong>G1</strong> - Battery box Power</li>
+                    <li><strong>H2</strong> - Headlight Illumination</li>
+                  </ul>
+                </div>
+                
+                <!-- Relay the Display -->
+                <div class="design-theme">
+                  <h3>Data Streaming</h3>
+                  <ul>
+                    <li><strong>A1</strong> - Glasses Head Attachment</li>
+                    <li><strong>B1</strong> - Buy Stereoscopic Camera</li>
+                    <li><strong>C2</strong> - 1 screen + divider</li>
+                    <li><strong>D3</strong> - Hybrid Internal Communication</li>
+                    <li><strong>E1</strong> - Wired Streaming</li>
+                    <li><strong>F2</strong> - Foot Pedal Control</li>
+                    <li><strong>G1</strong> - Battery box Power</li>
+                    <li><strong>H2</strong> - Headlight Illumination</li>
+                  </ul>
+                </div>
+                
+              </div>
+              <!-- END: Preliminary Design Themes -->
+              
+              <!-- BEGIN: Morphological Chart -->
+              <h2>Morphological Chart</h2>
+              <div class="table-wrap">
+                <table class="rcc-table morph-table">
+                  <thead>
+                    <tr>
+                      <th>Criteria</th>
+                      <th>Cheap</th>
+                      <th>Ergonomic</th>
+                      <th>Optical Quality</th>
+                      <th>Data Streaming</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Pictures row (drop in your images) -->
+                    <tr>
+                      <td><strong>Pictures</strong></td>
+                      <td>
+                        <!-- Replace src with your file; keep alt text -->
+                        <img class="morph-img" src="Media/Photos/Morphological Chart/Cheap.jfif" alt="Cheap concept image">
+                      </td>
+                      <td>
+                        <img class="morph-img" src="Media/Photos/Morphological Chart/Ergonomic.jfif" alt="Ergonomic concept image">
+                      </td>
+                      <td>
+                        <img class="morph-img" src="Media/Photos/Morphological Chart/Optical Quality.jfif" alt="Optical Quality concept image">
+                      </td>
+                      <td>
+                        <img class="morph-img" src="Media/Photos/Morphological Chart/Data Streaming.jfif" alt="Data Streaming concept image">
+                      </td>
+                    </tr>
+                    
+                    <!-- Criteria rows (values left blank for now) -->
+                    <tr><td>General comfort</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Longevity of comfort [h]</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Device weight [g]</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Fit adjustability [mm]</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Latency and video quality (ms, fps, resolution)</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Run Time [h]</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Safety in OR</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Display overlay functionality</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Image quality</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>UX</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Field of view [degrees]</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Depth of view [mm]</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>User display brightness [nits]</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Headlight brightness [lux]</td><td></td><td></td><td></td><td></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- END: Morphological Chart -->
+              
+              <!-- BEGIN: Patent Review -->
+              <section class="section" id="patent-review">
+                <h2>Patent Review (3)</h2>
+                
+                <!-- Patent 1 -->
+                <div class="disc-block">
+                  <div class="disc-header">
+                    <h3>
+                      US 10,620,460 B2 – Hands-free Spectrally Tunable Smart Loupe
+                    </h3>
+                  </div>
+                  <p>
+                    <a href="https://patentimages.storage.googleapis.com/f4/a0/0d/d9c8f843521cad/US10620460.pdf" target="_blank" rel="noopener">View PDF</a>
+                  </p>
+                  <ul class="meta">
+                    <li><strong>Date of Patent:</strong> Apr 14, 2020</li>
+                    <li><strong>Inventor:</strong> Christopher R. Carabin</li>
+                    <li><strong>Assignee:</strong> Rancho El Toston, LLC</li>
+                  </ul>
+                  
+                  <h4 class="subheading">Problem/Motivation:</h4>
+                  <ul>
+                    <li>Lighting in existing loupes is fixed/manually controlled</li>
+                    <li>Stages of procedures can require different lighting (curing resins, color matching)</li>
+                    <li>Manual adjustment of touching loupe interferes with surgical field</li>
+                    <li>Direction of light vs optical axis of magnifier can misalign/require re-adjustment if mount is bumped</li>
+                    <li>Many devices put weight on nose/small contact points that cause discomfort</li>
+                    <li>Open battery compartments or openings can harbor pathogens</li>
+                  </ul>
+                  
+                  <h4 class="subheading">Core Invention/Claims</h4>
+                  <h5>Frame/Mounting</h5>
+                  <ul>
+                    <li>Frame that holds lenses and supports lighting module</li>
+                    <li>Frame that presses against wearer’s head to better distribute weight</li>
+                  </ul>
+                  
+                  <h5>Spectrally Tunable Lighting Module</h5>
+                  <ul>
+                    <li>1+ LED with varying spectral characteristics (wavelengths/intensities/color temperature)</li>
+                    <li>Adjustable lighting module with degrees of freedom to align with light with magnifier’s optical axis</li>
+                    <li>Lighting with different colors to achieve tunability (RGBW, cool white/warm white etc)</li>
+                  </ul>
+                  
+                  <h5>Control Module + Hands-Free Interface</h5>
+                  <ul>
+                    <li>Control module that takes lighting commands and drives the LED module accordingly</li>
+                    <li>Hands free interface that allows user to control lighting without manually adjusting components (voice commands, gestures, other transducers)</li>
+                    <li>Optional communications interface to receive lighting commands remotely/integrate with external systems</li>
+                  </ul>
+                  
+                  <h5>Power/Battery Module</h5>
+                  <ul>
+                    <li>Battery embedded within frame</li>
+                    <li>Charging circuitry to recharge without needing open covers that compromise hygiene</li>
+                    <li>Frame and module layout to minimize openings or seams</li>
+                  </ul>
+                </div>
+                
+                <!-- Patent 2 -->
+                <div class="disc-block">
+                  <div class="disc-header">
+                    <h3>US 12,044,858 B2</h3>
+                  </div>
+                  <p>
+                    <a href="https://patentimages.storage.googleapis.com/ca/8a/3b/8387f8b466b0b8/US12044858.pdf" target="_blank" rel="noopener">View PDF</a>
+                  </p>
+                  <ul class="meta">
+                    <li><strong>Date:</strong> July 23, 2024</li>
+                    <li><strong>Inventor:</strong> Tomer Gera</li>
+                    <li><strong>Assignee:</strong> Augmedics LTD</li>
+                  </ul>
+                  
+                  <h4 class="subheading">Problem/Motivation</h4>
+                  <ul>
+                    <li>In surgical resection (specifically tumor resection), beneficial to visualize fluorescent dies in real time .</li>
+                    <li>Standard surgical loupes do not provide fluorescence imaging</li>
+                    <li>Existing fluorescence imaging devices are often bulky, microscope based, or not integrated with wearable loops.</li>
+                  </ul>
+                  
+                  <h4 class="subheading">Core Invention/Claims</h4>
+                  <ul>
+                    <li>Wearable loupe with dual illumination and imaging (one for regular illumination, one for fluorescence excitation. Camera captures same optical path as the user, surgeon sees what camera sees.</li>
+                    <li>Real time visualization of tissue fluorescence (tumor margin identification/resection guidance)</li>
+                    <li>Compact integration</li>
+                  </ul>
+                </div>
+                
+                <!-- Patent 3 -->
+                <div class="disc-block">
+                  <div class="disc-header">
+                    <h3>US 9,729,831 B2 – Wireless Surgical Loupes</h3>
+                  </div>
+                  <p>
+                    <a href="https://patentimages.storage.googleapis.com/05/df/3d/59789c30f683bb/US9729831.pdf" target="_blank" rel="noopener">View PDF</a>
+                  </p>
+                  <ul class="meta">
+                    <li><strong>Date of Patent:</strong> August 8, 2017</li>
+                    <li><strong>Assignee/Inventor:</strong> Sony</li>
+                  </ul>
+                  
+                  <h4 class="subheading">Problem/Motivation</h4>
+                  <ul>
+                    <li>Surgeons use optical loupes during delicate surgeries, providing magnification but lacking ability to integrate digital information (video capture, remote viewing, overlays)</li>
+                    <li>Need to augment loupes with digital capabilities - capture through the lens view, transmit it, and overlay/display relevant patient data</li>
+                    <li>Combining optical magnification with digital/wireless interactivity could enhance surgical workflows, education, documentation etc.</li>
+                  </ul>
+                  
+                  <h4 class="subheading">Core Invention/Claims</h4>
+                  <ul>
+                    <li>Lens + Half mirror/beam splitting optical path</li>
+                    <li>Light from lens gets split between surgeons eye and camera</li>
+                    <li>Wireless transmission and data flow</li>
+                    <li>device can display patient information on mini-display in the loupe</li>
+                    <li>Through-the-lens display + overlays</li>
+                    <li>System capable of overlaying patient or monitoring information in user’s optical path via projection through or reflection off the half mirror</li>
+                    <li>3D Stereo imaging</li>
+                    <li>Optional embodiment: 2 separate lenses/images can be captured to allow stereoscopic or 3D imaging</li>
+                  </ul>
+                </div>
+                
+                <!-- Comparison -->
+                <div class="disc-block">
+                  <div class="disc-header">
+                    <h3>Comparison — Relative Merits and Demerits VS Existing Patents</h3>
+                  </div>
+                  
+                  <div class="table-wrap">
+                    <table class="rcc-table">
+                      <thead>
+                        <tr>
+                          <th>Patent</th>
+                          <th>Merit</th>
+                          <th>Demerit</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>US 10,620,460 B2</td>
+                          <td>
+                            Our concept extends beyond illumination into streaming, collaboration, data capture, and AI driven workflows. This patent is essentially a lighting solution, ours is a multi-function visualization/communication platform.
+                          </td>
+                          <td>
+                            General form factor (loupe with integrated electronics) is similar, so need to emphasize functionality beyond lighting.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>US 12,044,858 B2</td>
+                          <td>
+                            System is task specific (fluorescence-guided surgery), ours in workflow-agnostic.<br>
+                            We also emphasize sharing the live view with others, not just enhancing surgeon’s perception
+                          </td>
+                          <td>
+                            Both rely on integrating digital imaging into the loupe. Creates risk that system could be interpreted as a generalized version of what this patents already does, rather than a novel invention.<br>
+                            Since both are head mounted loupes with imaging sensors, the hardware integration concept is similar
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>US 9,729,831 B2</td>
+                          <td>
+                            Focus is on capturing/streaming what surgeon sees and optionally overlaying vitals<br>
+                            Ours focuses on collaborative use + education + AI dataset generation, not just remote viewing<br>
+                            We integrate sterile usability, simple activation, compatibility with surgical workflow
+                          </td>
+                          <td>
+                            This prior art covers beam splitter optics, camera integration, wireless transmission, and overlays. On the surface, our device would be seen as another wireless streaming loupe.<br>
+                            The granted claims are relatively broad around wireless transmission of the surgeon’s view which narrows our space.<br>
+                            Hints at remote viewing for training/teaching. We need to draw a sharper line to show novelty in structured data capture/workflow integration rather than just recording.
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+                <!-- Patentability Assessment -->
+                <div class="disc-block">
+                  <div class="disc-header">
+                    <h3>Patentability Assessment</h3>
+                  </div>
+                  
+                  <h4 class="subheading">Novelty</h4>
+                  <ul>
+                    <li>None of these patents describe a surgical loupe as an integrated collaboration + education + AI platform</li>
+                    <li>Prior art focuses on illumination, specialized fluorescence, or wireless streaming</li>
+                    <li>The combination of ergonomic design, general-purpose streaming, and AI-oriented data capture in a single sterilizable loupe is not disclosed on these patents</li>
+                  </ul>
+                  
+                  <h4 class="subheading">Utility</h4>
+                  <ul>
+                    <li>Design addresses well-documented clinical problems</li>
+                    <li>Surgeon musculoskeletal strain (ergonomics)</li>
+                    <li>Need for teaching tools (streaming)</li>
+                    <li>Modern AI-driven medicine (structured data capture)</li>
+                    <li>Device clearly useful in surgery, education, and research</li>
+                  </ul>
+                  
+                  <h4 class="subheading">Non-Obviousness (Ingenuity)</h4>
+                  <ul>
+                    <li>Though each piece exists separately, it’s not obvious to combine them because:</li>
+                    <li>Prior art does not suggest that surgical loupes should double as educational broadcast tools or AI dataset generators</li>
+                    <li>Integrating ergonomics, optics, streaming, and sterilization in one wearable requires non-trivial engineering trade-offs (heat, weight, optics, networking)</li>
+                  </ul>
+                  
+                  <h4 class="subheading">Overall</h4>
+                  <ul>
+                    <li>Our design appears patentable if our claims are framed around:</li>
+                    <li>Integration of functions (ergonomics, streaming, AI/data capture, workflow compliance)</li>
+                    <li>New use cases (collaboration, education, AI training)</li>
+                    <li>Non-Obvious System Architecture (sterile, wearable, ergonomic, multipurpose device)</li>
+                  </ul>
+                </div>
+              </section>
+              <!-- END: Patent Review -->
+              
+              
+              
+            </section>
+          </div>
+        </details>
+        
+        <p><a href="#">Back to top</a></p>
+      </div>
+      
+      <!-- TEMPLATE FOR LATER -->
+      <div id="week-5" class="section update-section">
         <h2>Week x - IN PROGRESS</h2>
         <div class="meta">Date range: month xx - xx, year</div>
         
@@ -380,7 +1036,7 @@
         <details class="update-details">
           <summary>Details</summary>
           <div class="details-body">
-
+            
             <!-- ME -->
             <section class="disc-block me-block">
               <header class="disc-header">

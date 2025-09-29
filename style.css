@@ -17,6 +17,9 @@
   --arrow-min: 6px;
   --arrow-max: 44px;
   --rail-gap: 8px;
+
+  --header-h: 64px; /* adjust to match your header's actual height */
+  --sticky-gap: 8px; /* breathing room under the header */
 }
 
 * {
@@ -47,7 +50,7 @@ a:focus {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 24px;
 }
@@ -203,7 +206,7 @@ main {
 
 /* Article-style content */
 .article {
-  max-width: 850px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 .meta {
@@ -582,4 +585,73 @@ ul ul ul {
   font-size: 0.9rem;
   margin-top: 6px;
   color: var(--muted);
+}
+
+/* --- RCC table (Objectives / Constraints / Criteria) --- */
+.table-wrap {
+  overflow-x: auto;
+  padding: 0.25rem 0;
+}
+.rcc-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  font-size: 0.96rem;
+}
+.rcc-table thead th {
+  position: sticky;
+  top: 0;
+  background: color-mix(in srgb, var(--accent) 8%, var(--card));
+  color: var(--text);
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 700;
+}
+.rcc-table td {
+  vertical-align: top;
+  padding: 12px 14px;
+  border-top: 1px solid var(--border);
+}
+.rcc-table tr:first-child td {
+  border-top: none;
+}
+.rcc-table ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.rcc-table td:first-child,
+.rcc-table th:first-child {
+  width: 12rem; /* keeps the Need column readable */
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .rcc-table td:first-child,
+  .rcc-table th:first-child {
+    width: 9rem;
+  }
+}
+
+/* Morphological chart images */
+.morph-table .morph-img {
+  display: block;
+  width: 100%;
+  max-width: 220px; /* prevents oversized images */
+  height: auto;
+  margin: 6px auto;
+  object-fit: contain; /* preserves drawing proportions */
+  border-radius: 8px;
+}
+.morph-table td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .morph-table .morph-img {
+    max-width: 160px;
+  }
 }
