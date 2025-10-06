@@ -655,3 +655,12 @@ ul ul ul {
     max-width: 160px;
   }
 }
+
+.pdf-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.pdf-link:hover {
+  text-decoration: underline;
+}
