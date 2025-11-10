@@ -664,3 +664,28 @@ ul ul ul {
 .pdf-link:hover {
   text-decoration: underline;
 }
+
+/* Video and media layout control */
+.media-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Apply consistent, responsive video sizing */
+.media-grid video {
+  width: 60%; /* adjust as needed: try 50–70% */
+  max-width: 720px; /* ensures it never exceeds 720px */
+  height: auto; /* maintain aspect ratio */
+  border-radius: 12px; /* soft corners like your other cards */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+/* Optional: tweak how video behaves in small screens */
+@media (max-width: 768px) {
+  .media-grid video {
+    width: 90%;
+  }
+}
